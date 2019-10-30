@@ -1,37 +1,30 @@
-## Welcome to GitHub Pages
+## SUMMARY
+We are going to implement a Lightweight Framework for Convolutional Neural Network training and inferencing using C++ and CUDA.
 
-You can use the [editor on GitHub](https://github.com/Simeng96/CNN-CUDA/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+### BACKGROUND
+Convolutional Neural Network is a class of deep neural network used for visual or speech related tasks. A detailed explanation can be found in [http://yann.lecun.com/exdb/publis/pdf/lecun-bengio-95a.pdf].(http://yann.lecun.com/exdb/publis/pdf/lecun-bengio-95a.pdf) The most tricky part of the Convolutional Neural Network is Convolution Layer. The algorithm of performing a forward calculation and backward propagation on a tensor (a high dimension matrix) is shown as follows. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Pseudo code for forward passing (by Prof. Bhiksha Raj) 
 
-### Markdown
+Pseudo code for backward propagation (by Prof. Bhiksha Raj) 
 
+From the above pseudo code, we can see that there exists potential of parallelism in both channel dimension and spatial dimensions. In this project, we aim to fully explore the parallel strategy to let the convolutional calculation more efficient with respect to variable tensor size, which is common in real-world Convolutional Neural Network. 
+
+### CHALLENGE
+1. The computation requirement and memory requirement vary a lot with respect to tensor size and the number of parameters. It is hard to come up with a universal strategy to accommodate for different tasks. 
+2. Efficient memory handling is tricky when the amount of computation varies. We will use different levels of memory (Cache and Main Memory) when faced with different kinds of tasks. 
+3. To implement a framework for CNN, we have to implement all the components which are necessary to run a model, including image preprocessing functions provided in OpenCV, data-loader and optimizer(such as SGD and Adam). If time is limited, we are going to focus more on components that are related to parallel programming and the system should not necessarily be end to end. 
+4. Error handling is tricky when there are nesty memory-related or cache-related bugs in CUDA, for sometimes we cannot get the appropriate error message.
+
+### RESOURCES
+1. Andrew Machine GPU and GCP 
+2. Pytorch source code (may be tricky, we should conduct experiments and play around it) 
+
+### GOALS AND DELIVERABLES
+75%: Implement a runnable CNN framework, which performs 50% as efficient as PyTorch on average(we’ll build reasonable and explainable test cases). 
+100%: Achieves 75% efficiency of Pytorch on average. 
+125%: Outperforms Pytorch in some cases, while maintaining 75% PyTorch efficiency on average. 
+
+### PLATFORM CHOICE
+We are going to implement tensors in C++ on CPU side and the computation related to tensors in CUDA on GPU side.
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Simeng96/CNN-CUDA/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
