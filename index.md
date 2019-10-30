@@ -22,7 +22,9 @@ From the above pseudo code, we can see that there exists potential of parallelis
 
 ### GOALS AND DELIVERABLES
 75%: Implement a runnable CNN framework, which performs 50% as efficient as PyTorch on average(we’ll build reasonable and explainable test cases). 
-100%: Achieves 75% efficiency of Pytorch on average.  
+
+100%: Achieves 75% efficiency of Pytorch on average. 
+
 125%: Outperforms Pytorch in some cases, while maintaining 75% PyTorch efficiency on average. 
 
 ### PLATFORM CHOICE
@@ -30,9 +32,13 @@ We are going to implement tensors in C++ on CPU side and the computation related
 
 ### SCHEDULE
 Nov Week1: PyTorch source code study 
+
 Nov Week2: Implement CPU version of 2D Convolutional Layer; Midterm report 
+
 Nov Week3: Implement GPU parallel version of 2D Convolutional Layer 
+
 Nov Week4: Optimize efficiency
+
 Dec Week1: Optimize efficiency; Final report
 
 
