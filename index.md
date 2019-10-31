@@ -2,11 +2,13 @@
 We are going to implement a Lightweight Framework for Convolutional Neural Network training and inferencing using C++ and CUDA.
 
 ### BACKGROUND
-Convolutional Neural Network is a class of deep neural network used for visual or speech related tasks. A detailed explanation can be found in [http://yann.lecun.com/exdb/publis/pdf/lecun-bengio-95a.pdf].(http://yann.lecun.com/exdb/publis/pdf/lecun-bengio-95a.pdf) The most tricky part of the Convolutional Neural Network is Convolution Layer. The algorithm of performing a forward calculation and backward propagation on a tensor (a high dimension matrix) is shown as follows. 
+Convolutional Neural Network is a class of deep neural network used for visual or speech related tasks. A detailed explanation can be found in [http://yann.lecun.com/exdb/publis/pdf/lecun-bengio-95a.pdf](http://yann.lecun.com/exdb/publis/pdf/lecun-bengio-95a.pdf). The most tricky part of the Convolutional Neural Network is Convolution Layer. The algorithm of performing a forward calculation and backward propagation on a tensor (a high dimension matrix) is shown as follows. 
 
 Pseudo code for forward passing (by Prof. Bhiksha Raj) 
+![alt text](/image/1.png)
 
 Pseudo code for backward propagation (by Prof. Bhiksha Raj) 
+![alt text](/image/2.png)
 
 From the above pseudo code, we can see that there exists potential of parallelism in both channel dimension and spatial dimensions. In this project, we aim to fully explore the parallel strategy to let the convolutional calculation more efficient with respect to variable tensor size, which is common in real-world Convolutional Neural Network. 
 
@@ -23,7 +25,7 @@ From the above pseudo code, we can see that there exists potential of parallelis
 ### GOALS AND DELIVERABLES
 75%: Implement a runnable CNN framework, which performs 50% as efficient as PyTorch on average(we’ll build reasonable and explainable test cases). 
 
-100%: Achieves 75% efficiency of Pytorch on average. 
+100%: Achieves 75% efficiency of Pytorch on average.
 
 125%: Outperforms Pytorch in some cases, while maintaining 75% PyTorch efficiency on average. 
 
