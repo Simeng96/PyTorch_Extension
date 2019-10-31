@@ -1,6 +1,9 @@
 ## SUMMARY
 We are going to implement a Lightweight Framework for Convolutional Neural Network training and inferencing using C++ and CUDA.
 
+## PROPOSAL
+[Proposal](https://github.com/Simeng96/Lightweight-CNN-Framework/blob/master/proposal.pdf)
+
 ### BACKGROUND
 Convolutional Neural Network is a class of deep neural network used for visual or speech related tasks. A detailed explanation can be found in [http://yann.lecun.com/exdb/publis/pdf/lecun-bengio-95a.pdf](http://yann.lecun.com/exdb/publis/pdf/lecun-bengio-95a.pdf). The most tricky part of the Convolutional Neural Network is Convolution Layer. The algorithm of performing a forward calculation and backward propagation on a tensor (a high dimension matrix) is shown as follows. 
 
