@@ -4,7 +4,7 @@ We are going to implement a basic module (such as  LSTM) based on PyTorch and op
 ## PROPOSAL
 [Proposal](https://github.com/Simeng96/Lightweight-CNN-Framework/blob/master/proposal.pdf)
 
-## CHECKPOINY
+## CHECKPOINT
 [Checkpoint](https://github.com/Simeng96/Lightweight-CNN-Framework/blob/master/checkpoint.pdf)
 
 
