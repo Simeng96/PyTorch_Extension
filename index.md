@@ -7,6 +7,9 @@ We are going to implement a basic module (such as  LSTM) based on PyTorch and op
 ## CHECKPOINT
 [Checkpoint](https://github.com/Simeng96/Lightweight-CNN-Framework/blob/master/checkpoint.pdf)
 
+## FINAL REPORT
+[Final](https://github.com/Simeng96/PyTorch_Extension/blob/master/Final%20Report.pdf)
+
 ## CODE
 [python/](https://github.com/Simeng96/PyTorch_Extension/tree/master/code/python) folder contains the original high order convolution model built on PyTorch extension (nn.Module)  
 
