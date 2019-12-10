@@ -1,5 +1,5 @@
 ## SUMMARY
-We are going to implement a basic module (such as  LSTM) based on PyTorch and optimize its performance using PyTorch’s C++ and CUDA extension. 
+We implemented the High Order Convolution Module based on PyTorch and optimized its performance using PyTorch’s C++ and CUDA extension. We experimented our implementations with NVIDIA Tesla K80. Our implementation with PyTorch’s C++ extension is about 2x faster for forward and more than 10x faster for backward compared to basic Python implementation on GPU. And our implementation with PyTorch’s CUDA extension is more than 20x faster for forward and 100x faster for backward compared to basic Python implementation on GPU. 
 
 ## PROPOSAL
 [Proposal](https://github.com/Simeng96/Lightweight-CNN-Framework/blob/master/proposal.pdf)
